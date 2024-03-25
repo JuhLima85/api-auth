@@ -1,0 +1,13 @@
+version: "3"
+services:
+  mysqldb:
+    image: mysql
+    container_name: containerMysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=testedb
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3307:3306"
+    cap_add:
+      - SYS_NICE
